@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.z = Input.GetAxisRaw("Vertical");
         
-        if (Input.GetKey(KeyCode.Space) && !dashPressed)
+        if (Input.GetKeyDown(KeyCode.Space) && !dashPressed)
         {
             StartCoroutine("DashCooldown");
             //rb.AddForce(movement*-dashForce*Time.deltaTime);
